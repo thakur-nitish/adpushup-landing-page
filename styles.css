@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header-content{
+  margin-left: 110px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #ff5a60;
+  color: #fff;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.membership{
+  margin-left: 110px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.membership img{
+  margin-top: 30px;
+
+  height: 120px;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  max-width: 900px;
+  margin-left: 110px;
+}
+
+
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+  font-size: 2.5rem;
+  line-height: 54px;
+  width: 500px;
+  margin-top: 20px;
+}
+
+.header ul {
+  list-style-type: none;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.header ul li {
+  margin: 0.5rem 0;
+}
+
+.carousel-box {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  overflow: hidden;
+}
+
+.carousel ,.carousel2{
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  text-align: center;
+}
+
+.carousel-item img {
+  max-width: 150px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Sticky Form Styling */
+.form {
+  background-color: #fff;
+  padding: 10px 40px;
+  border-radius: 10px;
+  position: fixed;
+  top: 5%;
+  right: 110px;
+  width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.form label{
+  color: #333;
+}
+
+.form-header{
+  text-align: center;
+}
+.form h3 {
+font-size: 36px;
+color: #fc4b58!important;
+}
+
+.form p{
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.form input,
+.form select,
+.form button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.required {
+  color: red;
+  margin-left: 0.2rem;
+}
+
+
+.form button {
+  text-align: center;
+  background-color: #ff5a60;
+  color: #fff;
+  cursor: pointer;
+padding-top: 8px;
+padding-bottom: 8px;
+  margin:auto;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+form > p{
+  text-align: center;
+  font-size: 15px !important;
+  margin-top: 15px;
+}
+
+
+.benefits {
+  background-color: #fff4f4;
+  padding-block: 110px;
+}
+
+.benefits-content{
+  display: flex;
+  margin-left: 110px;
+  width: 55%;
+  flex-direction: column;
+}
+
+.benefits h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.benefit {
+  max-width: 800px;
+  display: flex;
+}
+
+
+.benefit p {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.benefit div{
+  width: 58%;
+}
+
+.benefit img{
+  height: 300px;
+  width: 300px;
+  float: right;
+}
+.circle-text {
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  color: #ff4954;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #ff5a60;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.text {
+  color: #ff5a60;
+  font-weight: bold;
+}
+
+.testimonials h1{
+  color: #000;
+  font-weight: 700;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  margin-left: 42px;
+  text-align: center;
+  font-size: 42px;
+  line-height: 60px;
+}
+
+.testimonials .container{
+  margin-left: 110px;
+  width: 50%;
+}
+
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.benefit-card {
+  background-color: #f2295b;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: calc(50% - 1rem);
+  min-width: 300px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  /* Remove the animation here */
+}
+
+.benefit-card.visible {
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+/* Delay each card's animation */
+.benefit-card:nth-child(1) { animation-delay: 0.2s; }
+.benefit-card:nth-child(2) { animation-delay: 0.4s; }
+.benefit-card:nth-child(3) { animation-delay: 0.6s; }
+.benefit-card:nth-child(4) { animation-delay: 0.8s; }
+
+.benefit-card:hover {
+  transform: scale(1.02) translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.benefit-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.benefit-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .benefit-card {
+      width: 100%;
+  }
+
+  h1 {
+      font-size: 2rem;
+      padding: 0 1rem;
+  }
+}
+
+.reason {
+  background-color: #fff4f4;
+  text-align: center;
+margin-top: 60px;
+padding: 55px 0px;
+}
+
+.reason h3 {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 700;
+  font-size: 50px;
+  margin-left: 110px;
+  width: 50%;
+}
+
+.adDesk{
+  margin-left: 110px;
+  margin: 100px 110px;
+}
+
+.adDesk h2{
+  margin-bottom: 40px;
+}
+
+.tagLine{
+  background-color: #f2295b;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.tagLine div{
+  display: flex;
+  flex-direction: row;
+  margin-left: 110px;
+  margin-top: 50px;
+}
+
+.tagLine  p{
+  font-size: 36px;
+  width: 40%;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.tagLine img{
+  width: 250px;
+}
+footer p{
+  font-size: 22px;
+margin-left: 110px;
+padding: 60px 0px 120px 0px;
+}
